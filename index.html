@@ -1,0 +1,40 @@
+<div id="app" class="title">{{ message }}
+
+
+  <div class="title">{{ t }}</div>
+  <button @click="increment">+</button>
+  <div>{{ count }}</div>
+  <button @click="decrement">-</button>
+</div>
+<link href="https://unpkg.com/tailwindcss@^2/dist/tailwind.min.css" rel="stylesheet">
+
+
+
+<script type="module">
+  import { createApp } from 'https://unpkg.com/vue@3/dist/vue.esm-browser.js'
+
+
+  createApp({
+    data() {
+      return {
+        count: 0,
+      }},
+    methods: {
+      increment() {
+        this.count++
+      },
+      decrement() {
+        this.count--
+      },
+    },
+    
+  }).mount('#app')
+</script>
+
+<style>
+    .title {
+        font-size: 4rem;
+        font-weight: 800;
+        color: #8f1010;
+    }
+</style>
